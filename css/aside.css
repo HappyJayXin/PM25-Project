@@ -1,0 +1,28 @@
+aside section {
+  height: 100%;
+  width: 100%;
+  border-right: 3px solid #000;
+}
+.citys {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  overflow: scroll;
+}
+.citys li {
+  text-align: center;
+  padding: 0.2em 0;
+  font-size: 2em;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+.citys > li {
+  background: #fff;
+}
+.site > li {
+  list-style: none;
+  font-size: 1.5em;
+  padding-left: 1em;
+  color: #2f3542;
+  font-weight: bold;
+}

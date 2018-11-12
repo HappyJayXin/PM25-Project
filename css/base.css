@@ -1,0 +1,23 @@
+.hide{
+    display: none;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.padding{
+    padding: 1em;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+.color-w{
+    color: #fff;
+}
+
+.line-h{
+    line-height: 1.5;
+}

@@ -1,0 +1,28 @@
+main h2{    
+    font-size: 2.5em;
+}
+#sort{
+    border: 2px solid #000;
+    border-radius: 50%;
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+#sort_text{
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+}
+#content{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 1.8em 2.5em;
+}
+main section{
+    font-size: 1.1em;
+}

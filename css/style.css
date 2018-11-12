@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: Microsoft JhengHei;
+    font-size: 16px;
+}
+
+header{
+    background: #fff;
+    height: 10%;
+    display: flex;
+    border-bottom: 1px solid #000
+}
+
+aside{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    margin-left: -250px;
+    background: #fff;
+}
+
+main{
+    background: #f1f2f6;
+    height: 80%;
+    color: #000;
+}
+
+footer{
+    height: 10%;
+}
