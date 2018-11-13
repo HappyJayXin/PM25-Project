@@ -169,13 +169,11 @@ $(function() {
   };
 
   $.ajax({
-    url: 'https://opendata.epa.gov.tw/ws/Data/ATM00625/?$format=json',    
+    url: 'https://opendata.epa.gov.tw/ws/Data/ATM00625/?$format=json',
     type: 'POST',
     dataType: 'jsonp',
-    async: false,
-    // success: getData,
     success: function(data){
-      alert(data[0].Site)
+      getData(data)
     },
     error: function() {
       alert('錯誤，無法取得資料!');
