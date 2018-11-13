@@ -172,6 +172,7 @@ $(function() {
     url: 'https://opendata.epa.gov.tw/ws/Data/ATM00625/?$format=json',
     type: 'GET',
     dataType: 'jsonp',
+    async: false,
     success: getData,
     error: function() {
       alert('錯誤，無法取得資料!');
