@@ -62,7 +62,7 @@ $(function() {
       s.textColor = textColor[1];
       s.p = 3;
     } else {
-      s.text = '非常高';
+      s.text = '極高';
       s.bgcolor = PMColorArr[9];
       s.textColor = textColor[1];
       s.p = 4;
