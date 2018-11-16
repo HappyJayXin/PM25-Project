@@ -169,8 +169,8 @@ $(function() {
   };
 
   $.ajax({
-    url: 'https://opendata.epa.gov.tw/ws/Data/ATM00625/?$format=json',
     type: 'GET',
+    url: 'https://opendata.epa.gov.tw/ws/Data/ATM00625/?$format=json',
     dataType: 'jsonp',
     async: false,
     success: getData,
