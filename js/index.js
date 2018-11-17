@@ -1,6 +1,6 @@
 $(function() {
   // localStorage.clear();
-  var PMColorArr = [
+  let PMColorArr = [
     '9CFF9C',
     '31FF00',
     '31CF00',
@@ -12,10 +12,10 @@ $(function() {
     '990000',
     'CE30FF'
   ];
-  var textColor = ['000', 'fff'];
+  let textColor = ['000', 'fff'];
 
-  var compute = pm25 => {
-    var s = {};
+  let compute = pm25 => {
+    let s = {};
     if (pm25 >= 0 && pm25 <= 11) {
       s.text = '低';
       s.bgcolor = PMColorArr[0];
@@ -71,8 +71,8 @@ $(function() {
   };
 
   // add color to footer table backgroundColor
-  var cLen = $('.table td').length;
-  for (var c = 0; c < cLen; c++) {
+  let cLen = $('.table td').length;
+  for (let c = 0; c < cLen; c++) {
     $('.table td:nth-child(' + (c + 1) + ')').css(
       'backgroundColor',
       '#' + PMColorArr[c]
@@ -82,8 +82,8 @@ $(function() {
   // -------------------click event----------------------
 
   // nav toggle
-  var dis = 250; // open side menu distance
-  var moveMenu = () => {
+  let dis = 250; // open side menu distance
+  let moveMenu = () => {
     $('#nav-toggle').toggleClass('active');
 
     $('body').animate({ 'margin-left': '+=' + dis + 'px' }, 700);
@@ -101,14 +101,14 @@ $(function() {
   });
 
   // click menu do this to put data to the main
-  var setPM_data = area => {
-    var local_city_num = localStorage.getItem('local_city_num');
+  let setPM_data = area => {
+    let local_city_num = localStorage.getItem('local_city_num');
 
     if (window.localStorage) {
       if (local_city_num) {
-        var pm25 = area[local_city_num].PM25; // pm Data
+        let pm25 = area[local_city_num].PM25; // pm Data
         if (pm25 != '') {
-          var sort = compute(pm25); // set pm color & text
+          let sort = compute(pm25); // set pm color & text
 
           // set 縣市
           $('main h2').text(
@@ -134,11 +134,11 @@ $(function() {
 
   // -------------------menu ajax----------------------
 
-  var getData = data => {
+  let getData = data => {
     setPM_data(data); // show data
 
-    var countryArr = []; // to count country length
-    for (var datas of data) {
+    let countryArr = []; // to count country length
+    for (let datas of data) {
       countryArr.push(datas.county);
     }
 
@@ -146,7 +146,7 @@ $(function() {
     $('li').each(function(index) {
       $(this).after('<ul class="site hide"></ul>');
 
-      for (var c = 0, cl = countryArr.length; c < cl; c++) {
+      for (let c = 0, cl = countryArr.length; c < cl; c++) {
         if ($(this).text() === data[c].county) {
           $(this)
             .next('ul')
@@ -158,7 +158,7 @@ $(function() {
     // user cheese he want to know city's data
     $('.site li').on('click', function() {
       moveMenu();
-      for (var i = 0; i < countryArr.length; i++) {
+      for (let i = 0; i < countryArr.length; i++) {
         if ($(this).text() === data[i].Site) {
           // svae lastest array num to localstorage
           localStorage.setItem('local_city_num', i);
